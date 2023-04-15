@@ -1,0 +1,5 @@
+package com.vik.resttemplate.model;
+
+public class Employee {
+
+}

@@ -1,0 +1,98 @@
+package streams;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Supplier;
+import java.util.stream.Stream;
+
+//https://www.youtube.com/watch?v=nasQiFeJ-Gs&list=PLkhF8zTRdky_dEoAQMcActWjbaVLLL5Wv&index=4
+public class ReusingStreams {
+
+	public static void main(String[] args) {
+		
+		//exceptionReusingTerminalOperation();
+		//exceptionReusingIntermediateOperation();
+		usingSupplier();
+		
+		System.out.println("-----------");
+		List<Integer> list = Arrays.asList(3,2,5,1);
+		
+		ArrayList<String> l = new ArrayList<>();
+		l.stream();
+		
+		//Creating stream
+		Stream<Integer> stream = list.stream();
+		
+		
+		System.out.println("stream ="+ stream);
+		//System.out.println(" mappedStream = "+ mappedStream);
+		
+		//mappedStream.peek(e -> System.out.println(e));
+		
+		
+	//	Stream<Integer> intermediateStream = stream.filter(e -> e > 2);
+		//System.out.println("intermediateStream = "+intermediateStream);
+		
+		//Stream<Integer> intermediateStream = stream.filter(e -> e>2);
+		//System.out.println("intermediateStream = "+intermediateStream);
+		
+		//Stream<Integer> intermediateStream2 = intermediateStream.map(e -> e2);
+		//System.out.println("intermediateStream2 = "+intermediateStream2);
+		
+		
+		  //int first = stream.findFirst().get(); 
+		//  System.out.println("First Element = "+first);
+		  
+		  //reusing same stream long count = stream.count();
+		//  System.out.println("count = "+ count);
+		 
+		
+		
+		
+		
+	}
+	
+	static void exceptionReusingTerminalOperation() {
+		List<Integer> list = Arrays.asList(3,2,5,1);
+		
+		//Creating stream
+		Stream<Integer> stream = list.stream();
+		
+		//calling terminal operation on this stream
+		Optional<Integer> first = stream.findFirst();
+		System.out.println(" First element of list = "+ first.get());
+		
+		
+		//calling terminal operation on the same stream AGAIN
+		Optional<Integer> any = stream.findAny();
+		System.out.println(" A member element of list = "+ any.get());
+	}
+	
+	static void exceptionReusingIntermediateOperation() {
+		List<Integer> list = Arrays.asList(3,2,5,1);
+		
+		//Creating stream
+		Stream<Integer> stream = list.stream();
+		
+		//calling intermediate operation on this stream
+		Stream<Integer> gtTwoElements = stream.filter( e -> e > 2);
+		
+		//calling another intermediate operation on the same stream AGAIN
+		Stream<Integer> multiplyTwo = stream.map( e -> e*2 );
+		
+	}
+	static void usingSupplier(){
+		List<Integer> list = Arrays.asList(3,2,5,1);	
+       Supplier<Stream<Integer>> supplier = () -> list.stream();
+		
+		//using stream first time
+		int first2 = supplier.get().findFirst().get();
+		System.out.println("First Element = "+ first2);
+		
+		//reusing same stream
+		long count2 = supplier.get().count();
+		System.out.println("count = "+ count2);
+	}
+}

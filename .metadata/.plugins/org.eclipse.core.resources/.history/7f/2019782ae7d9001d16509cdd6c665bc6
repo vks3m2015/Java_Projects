@@ -1,0 +1,5 @@
+package com.vik.springcloudconfigclient1.controller;
+
+public class MyController {
+
+}

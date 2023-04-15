@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;streams.ReusingStreams.exceptionReusing()&apos; to &apos;exceptionReusingTerminalOperation&apos;&#x0D;&#x0A;- Original project: &apos;java8features&apos;&#x0D;&#x0A;- Original element: &apos;streams.ReusingStreams.exceptionReusing()&apos;&#x0D;&#x0A;- Renamed element: &apos;streams.ReusingStreams.exceptionReusingTerminalOperation()&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;exceptionReusing&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;streams{ReusingStreams.java[ReusingStreams~exceptionReusing" name="exceptionReusingTerminalOperation" references="true" stamp="1681057382756" version="1.0"/>
+</session>

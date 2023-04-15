@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation=
+                          "http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/context
+	   		               http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<!-- <bean/> definitions here -->
+
+  <bean id="empbean" class="employee.Employee" init-method="myInit" destroy-method="myDestroy" autowire="byName"> 
+  <property name="id" value="51393"></property> 
+  <property name="name" value="Vikas Singh"></property>  
+  </bean> 
+  
+  <bean id = "department" class= "department.Department">
+  <property name = "department_name" value = "cisco"></property> 
+  <property name = "tl" value = "abc"></property>
+  <property name = "manager" value = "xyz"></property>
+  <property name = "director" value = "pqr"></property>
+  </bean>
+  
+   <context:component-scan base-package="payment"></context:component-scan>  
+   <bean class= "address.DisplayBeanPostProcessor"/>
+   <!--  <bean class= "address.BeanPostPro"/> --> 
+   
+   <bean class= "aware.AwareBeanImpl"/> 
+   
+</beans>

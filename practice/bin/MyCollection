@@ -1,0 +1,18 @@
+import java.utils.*;
+
+class MyCollection
+{
+  
+  public static void main( String[] arg)
+  {
+     ArrayList<String> al = new ArrayList<String> ();
+     al.add("vikas");
+     al.add("singh");
+     al.add("utkarsh");
+     
+     System.out.println(al);
+  
+  }
+    
+
+}

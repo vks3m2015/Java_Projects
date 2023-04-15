@@ -1,0 +1,5 @@
+package com.vik.resttemplate.controller;
+
+public class MyController {
+
+}

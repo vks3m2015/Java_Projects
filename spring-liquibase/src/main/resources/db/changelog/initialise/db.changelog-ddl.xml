@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+
+	<changeSet id="1" author="vikas">
+		<createTable tableName="POST">
+			<column name="ID" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="TITLE" type="varchar(150)" />
+		</createTable>
+	</changeSet>
+
+	<changeSet id="2" author="vikas">
+		<createTable tableName="SALES">
+			<column name="ID" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="SalesPersonId" type="int" />
+			<column name="Amount" type="int" />
+		</createTable>
+	</changeSet>
+
+	<changeSet id="3" author="vikas">
+		<createTable tableName="SalesPerson">
+			<column name="ID" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="NAME" type="varchar(150)" />
+
+		</createTable>
+	</changeSet>
+
+	<changeSet id="4" author="vikas">
+		<createTable tableName="EMPLOYEE">
+			<column name="ID" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="NAME" type="varchar(150)" />
+			<column name="SALARY" type="int" />
+            <column name="DEP_ID" type="int" />
+            <column name="MANAGER_ID" type="int" />
+
+		</createTable>
+	</changeSet>
+
+    <changeSet id="5" author="vikas">
+		<createTable tableName="Department">
+			<column name="ID" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="NAME" type="varchar(150)" />
+
+		</createTable>
+	</changeSet>
+
+
+</databaseChangeLog>

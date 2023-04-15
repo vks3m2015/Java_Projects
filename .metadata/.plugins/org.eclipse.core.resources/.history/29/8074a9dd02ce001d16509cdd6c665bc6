@@ -1,0 +1,13 @@
+package streams;
+
+//https://www.youtube.com/watch?v=nasQiFeJ-Gs&list=PLkhF8zTRdky_dEoAQMcActWjbaVLLL5Wv&index=4
+public class ReusingStreams {
+
+	public static void main(String[] args) {
+		
+		List<Integer> list = Arrays.asList(3,2,5,1);
+		
+		
+	}
+
+}

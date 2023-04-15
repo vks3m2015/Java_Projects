@@ -1,0 +1,94 @@
+package streams;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class StreamsPrograms {
+	
+	//Square the integres and find average of those squares values that are less than 100 
+	static void prog4() {
+		List<Integer> list = Arrays.asList(2,10,12,5,15);
+		
+		double avg = list.stream()
+				.map(num -> num * num)
+				.filter(squNum -> squNum < 100)
+				.mapToInt(squNum -> squNum)
+				.average()
+				.getAsDouble();
+		
+		System.out.println(" avg = "+avg);
+		
+	}
+
+	//average of odd integers from int list
+	static void prog2() {
+		List<Integer> list = Arrays.asList(1,2,3,4,5);
+		double avg = list.stream().filter(e -> e%2 == 1).mapToInt(e -> e.intValue()).average().getAsDouble();
+				
+			//	reduce((e1, e2) -> e1 + e2).map(e -> e/2).get();
+		System.out.println(" average of "+list + "= "+ avg);
+	}
+	
+	
+	
+	
+	//Interview
+	//from list of integers..create list that contains elements that start with number 1
+	static void prog1() {
+       
+        List<Integer> list = Arrays.asList(10, 15, 5, 20, 25, 100);
+		
+		List<Integer> list2 = list.stream()
+				.filter(n -> String.valueOf(n).startsWith("1"))
+				.collect(Collectors.toList());
+		
+		System.out.println(list2);
+	}
+	
+	static void prog3() {
+		
+		final class Employee{
+			int id;
+			int age;
+			
+			Employee(int id, int age){
+				this.id = id;
+				this.age = age;
+			}
+		}
+		
+		List<Employee> list = Arrays.asList(new Employee(123, 23), new Employee(345, 24), new Employee(567, 25));
+		
+		int sum = list.stream()
+				.filter(emp -> emp.age % 2 != 0)
+				.map( emp -> emp.age * emp.age)
+				.mapToInt(age2 -> age2.intValue())
+				.sum();
+		
+		
+		int sum2 = list.stream()
+				.filter(emp -> emp.age % 2 != 0)
+				.map( emp -> emp.age * emp.age)
+				.reduce( (a,b) -> a+b)
+				.get();
+				
+				
+		System.out.println(sum);
+		System.out.println(sum2);
+		
+	}
+	
+	
+	public static void main(String[] args) {
+        // prog1();	
+        // prog2();
+        // prog3();
+         prog4();
+
+	}
+
+}
+

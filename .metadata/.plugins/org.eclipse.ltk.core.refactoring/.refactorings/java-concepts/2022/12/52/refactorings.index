@@ -1,0 +1,9 @@
+1671521455622	Rename type 'CollectionUtils'
+1671565280892	Rename type 'ImmutableBill'
+1671605709314	Rename package 'concepts.models'
+1671605732596	Rename package 'models'
+1671700335395	Rename local variable 's'
+1671700358865	Rename local variable 's1'
+1671700381443	Rename local variable 's2'
+1671701732937	Rename local variable 'cons'
+1671702997898	Move compilation unit

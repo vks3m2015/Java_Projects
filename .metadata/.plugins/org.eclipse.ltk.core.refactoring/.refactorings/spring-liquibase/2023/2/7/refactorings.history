@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;spring-liquibase/src/main/resources/db/changelog/initialise/data/Sales&apos; to &apos;Sales.csv&apos;" description="Rename resource &apos;Sales&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/db/changelog/initialise/data/Sales" name="Sales.csv" stamp="1676529902527" updateReferences="true"/>
+</session>

@@ -1,0 +1,15 @@
+package concepts;
+
+public class ExceptionQues {
+
+	public static void main(String[] args) {
+		
+
+	}
+	
+	public void m() {
+		
+		throw new RuntimeException(new Exception());
+	}
+
+}

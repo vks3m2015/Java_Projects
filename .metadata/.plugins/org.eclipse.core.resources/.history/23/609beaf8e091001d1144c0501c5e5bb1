@@ -1,0 +1,5 @@
+package com.vik.faulttolerance.controller;
+
+public class ResourceController {
+
+}

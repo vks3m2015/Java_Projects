@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+
+	<changeSet author="vikas" id="loadData-Post" labels="data">
+		<loadData file="db/changelog/initialise/data/Post.csv" tableName="POST" separator=",">
+			<column header="ID" name="ID" type="NUMERIC" />
+			<column header="TITLE" name="TITLE" type="STRING" />
+		</loadData>
+	</changeSet>
+
+    <changeSet author="vikas" id="loadData-Sales" labels="data">
+		<loadData file="db/changelog/initialise/data/Sales.csv" tableName="Sales" separator=",">
+		</loadData>
+	</changeSet>
+
+    <changeSet author="vikas" id="loadData-SalesPerson" labels="data">
+		<loadData file="db/changelog/initialise/data/SalesPerson.csv" tableName="SalesPerson" separator=",">
+		</loadData>
+	</changeSet>
+
+   <changeSet author="vikas" id="loadData-Employee" labels="data">
+		<loadData file="db/changelog/initialise/data/Employee.csv" tableName="EMPLOYEE" separator=",">
+		</loadData>
+	</changeSet>
+
+    <changeSet author="vikas" id="loadData-Department" labels="data">
+		<loadData file="db/changelog/initialise/data/Department.csv" tableName="Department" separator=",">
+		</loadData>
+	</changeSet>
+
+
+</databaseChangeLog>
