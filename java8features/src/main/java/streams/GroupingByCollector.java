@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import beans.Employee;
+
 public class GroupingByCollector {
 
 	public static void main(String[] args) {
@@ -19,8 +21,8 @@ public class GroupingByCollector {
 				new Employee(123, "D", 3700, "Mumbai", "MH"));
 		
 		
-		empList.sort(null);
-
+		//List<String> empl = empList.stream().sorted(Comparator.comparing(emp -> emp.salary)).limit(2).map(emp -> emp.name).collect(Collectors.toList());
+        //System.out.println(empl);
 		// The following will classify Employee objects by state:
 		Map<String, List<Employee>> employeeByState = empList.stream()
 				.collect(Collectors.groupingBy(emp -> emp.state));
@@ -65,23 +67,5 @@ public class GroupingByCollector {
 	}
 }
 
-class Employee {
-	int id;
-	String name;
-	double salary;
-	String city;
-	String state;
 
-	Employee(int id, String name, double salary, String city, String state) {
-		this.id = id;
-		this.name = name;
-		this.salary = salary;
-		this.city = city;
-		this.state = state;
-	}
 
-	public String toString() {
-		return "\n Employee[ id: " + id + ", name: " + name + ", salary: " + salary + ", city: " + city + ", state: "
-				+ state + "]";
-	}
-}

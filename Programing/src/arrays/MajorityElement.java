@@ -38,19 +38,17 @@ public class MajorityElement {
 	//Sorting approach t-> O(nlgn) s-> O(1) or O(n)
 	static int majorityElement_2(int[] nums) {
 		Arrays.sort(nums);
-        int candidate = nums[nums.length/2];
-      
-      
-     int count = 0;
-      for (int index = 0; index < nums.length; index++) {
-        if (nums[index] == candidate)
-          count++;
-      }
-      if (count > (nums.length / 2))
-        return candidate;
-      
-      return -1;
-		
+		int candidate = nums[nums.length / 2];
+
+		int count = 0;
+		for (int index = 0; index < nums.length; index++) {
+			if (nums[index] == candidate)
+				count++;
+		}
+		if (count > (nums.length / 2))
+			return candidate;
+
+		return -1;
 	}
 	
 	//Divide and Conquer Approach t-> O(nlgn) s-> O(lgn)

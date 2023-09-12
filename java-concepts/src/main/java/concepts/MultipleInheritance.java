@@ -10,8 +10,21 @@ public class MultipleInheritance {
 
 }
 
+class Pegasus2 implements Flyer, Mythical{
+
+	//If not overriding then Compile time Error -
+	//Duplicate default methods named identifyMyself with the parameters () and () are inherited from 
+	//the types Mythical and Flyer
+	@Override
+	public String identifyMyself() {
+		return Flyer.super.identifyMyself();
+	}
+	
+}
+
 //Instance methods are preferred over interface default methods
 class Pegasus extends Horse implements Flyer, Mythical {
+	
 }
 
 class Horse {

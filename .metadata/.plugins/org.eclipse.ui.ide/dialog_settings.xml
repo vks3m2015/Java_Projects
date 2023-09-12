@@ -6,6 +6,13 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\Vik\Java_Projects\saga-choreography-example"/>
+			<item value="D:\Vik\Java_Projects\SpringCloudConfig\spring-cloud-config-client-2"/>
+			<item value="D:\Vik\Java_Projects\SpringCloudConfig\spring-cloud-config-client-1"/>
+			<item value="D:\Vik\Java_Projects\SpringCloudConfig\spring-cloud-config-server-1"/>
+			<item value="D:\Vik\Java_Projects\Microservices\circuit-breaker-resilience4j"/>
+			<item value="D:\Vik\Java_Projects\solid-principles"/>
+			<item value="D:\Vik\Java_Projects\rest-template"/>
 			<item value="D:\Vik\Java_Projects\spring-liquibase"/>
 			<item value="D:\Vik\Java_Projects\ui"/>
 			<item value="D:\Vik\Java_Projects\practice"/>

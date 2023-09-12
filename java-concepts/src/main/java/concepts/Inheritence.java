@@ -12,7 +12,7 @@ class Inheritence {
 		Parent pc = new Child();
 		
 		 //variable overriding is not supported in java. It will print parent class variable 
-		 System.out.println("  pc.str == "+ pc.commonVar); 
+		 System.out.println("  pc.commonVar == "+ pc.commonVar); 
 		 
 		 //ERROR - varInChildOnly cannot be resolved or is not a field
 		// String varInChildOnly = pc.varInChildOnly;
@@ -52,13 +52,12 @@ class Parent{
 	public void methodInParentOnly(){
 		System.out.println(" Class: Parent , Methdo: methodInParentOnly....");
 	}
-	
-	
 }
 
 class Child extends Parent{
 	
 	String str = "Child";
+	String commonVar = "Child";
 	String varInChildOnly = " This variable is in Child Class Only";
 	
 	public void commonMethod(){
@@ -67,6 +66,7 @@ class Child extends Parent{
 	
 	public void methodInChildOnly(){
 		System.out.println(" Class: Child , Methdo: methodInChildOnly....");
+		
 		 methodInParentOnly();
 	}
 }

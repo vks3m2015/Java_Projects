@@ -23,6 +23,6 @@ class MainMethodPolymorphismChild extends MainMethodPolymorphism{
 	
 	public static void main(String[] args) {
 		
-	       System.out.println(" This is main method.. First method Called by JVM");
+	       System.out.println(" This is main method in Child Class.. First method Called by JVM");
 		}
 }

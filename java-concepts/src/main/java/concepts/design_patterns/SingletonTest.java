@@ -32,12 +32,15 @@ class Singleton implements Serializable, Cloneable{
 		System.out.println(" Creating Singleton class object in Constructor....");
 	}
 	
-	public static Singleton getInstance(){
-		if(singletonInstance == null) {
-			System.out.println(" Creating Singleton class object in static method....");
-			singletonInstance = new Singleton();
+	public static Singleton getInstance() {
+		if (singletonInstance == null) {
+			synchronized (Singleton.class) {
+				if (singletonInstance == null) {
+					System.out.println(" Creating Singleton class object in static method....");
+					singletonInstance = new Singleton();
+				}
+			}
 		}
-		
 		return singletonInstance;
 	}
 	

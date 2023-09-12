@@ -36,8 +36,9 @@ public class MaximumSubArray {
 	 }
 	
 	public static void main(String[] args) {
-		int[] arr = {-2,1,-3,4,-1,2,1,-5,4};
-		System.out.println(maxSubArray(arr));
+		int[] arr = {-2,1,-3,4,-1,2,1,-5,4}; //6
+		int[] arr2 = {-2,-1,-3};
+		System.out.println(maxSubArray(arr2));
 
 	}
 

@@ -15,6 +15,7 @@ public class ArraysUtil {
 		//to create streams
 		IntStream stream = Arrays.stream(arr);
 		
+		
 		//to create list Unmodifiable
 		List<Person2> list = Arrays.asList(new Person2(123, "ABC"));
 		

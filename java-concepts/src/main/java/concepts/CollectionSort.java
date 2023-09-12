@@ -68,6 +68,14 @@ class Employee{
 		this.joiningDate = joiningDate;
 	}
 	
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(String name) {
+		this.name = name;
+	}
+
 	public String toString() {
 		return "\n Employee[ name = " + name + ", salary = "+ salary + ", joiningDate = "+joiningDate + " ]"; 
 	}

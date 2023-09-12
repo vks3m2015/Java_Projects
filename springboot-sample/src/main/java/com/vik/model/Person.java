@@ -1,5 +1,8 @@
 package com.vik.model;
 
+import org.springframework.stereotype.Component;
+
+//@Component
 public class Person {
 	
 	int id;
