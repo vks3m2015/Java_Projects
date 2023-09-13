@@ -23,6 +23,12 @@ import beans.Student;
 
 public class StreamsPrograms {
 	
+	static void commonElements() {
+		//list1 = {1,2,3,4,5}  
+		//list2 = {3,4,5,6,7}
+	    //Find out the common elements from the two lists (O/P - 3,4,5)
+	}
+	
 	static void occuranceOfChars() {
 		String str = "iamahumanbeing";
 		//Note -> conversion string to stream
